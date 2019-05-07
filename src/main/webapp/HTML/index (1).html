@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Reimbursement System</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+<div class = "alert alert-success" role = "alert">
+<h1 class="display-2 text-center" style = "border-bottom: 1px solid orange;">Welcome to the Employee Reimbursement System!</h1>
+ 
+<!-- <h5 class="display-4 text-center">Login</h5> -->
+</div>
+
+<!-- <form>
+  <div class="form-group row justify-content-center">
+    <div class="col-5">
+      <input type="text" id="username" class="form-control" placeholder="Enter Username">
+    </div>
+  </div>
+  <div class="form-group row justify-content-center">
+    <div class="col-5">
+      <input type="password" id="password" class="form-control" placeholder="Enter Password">
+    </div>
+  </div>
+  <div class="form-group row justify-content-center">
+    <div class="col-3.5">
+      <button type="button" id="userLogin" class="btn btn-outline-info">Login</button>
+    </div>
+  </div>
+</form> -->
+
+
+<!-- Ticket Form Column-->
+ <!-- invisible column -->
+<div class="invisible col-3"></div>
+  <nav class="navbar navbar-expand-lg navbar-light"> 
+    <div class="col" style="width: 35rem;">
+      <div class = "alert alert-primary" role = "alert">
+
+
+	<form id="login-form" method="POST" action="Login.do" role="form">         
+          <div class="col text-center">
+            <h4 class="navbar-text" style = "border-bottom: 1px solid blue;">Login</h4>
+          </div>      
+    
+          <div class="form-row">
+            <label for="userName">Username</label>
+            <input type="text" id="userName" name="userName" class="form-control" placeholder="Username">
+          </div>
+
+          <div class="form-row">
+            <label for="passWord">Password</label>
+            <input type="password" id="passWord" name="passWord" class="form-control" placeholder="Password">
+          </div>
+
+
+          <div class="form-row center"> 
+            <br/>
+            <input type="submit" class="btn btn-primary" id="loginButton" value="Login">
+          </div>
+</form>
+      </div>
+    </div>
+  </nav>
+
+<!-- invisible column -->
+<div class="invisible col-3"></div>
+
+
+<script type="text/javascript">
+
+	/*let user = document.getElementById("username").value;
+	let pass = document.getElementById("password").value;
+	console.log(user);
+	console.log(pass);*/
+<!--	function myFunc(){
+		let user = document.getElementById("userName").value;
+		let pass = document.getElementById("passWord").value;
+		console.log(user);
+		console.log(pass);
+		console.log("We logged in with user: " + user + " and pass: " + pass);
+	};
+
+	document.getElementById("login").addEventListener('click', function(){myFunc()}); -->
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

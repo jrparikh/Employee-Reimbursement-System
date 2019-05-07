@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Reimbursement System</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+<div class="form-group col">
+<div class = "alert alert-primary" role = "alert">
+  <a class="navbar-brand" style = "border-bottom: 1px solid blue"; href="#">Finance Manager Portal</a>
+  
+  <div class="collapse navbar-collapse" id="navbarText">
+  <div class="form-group col">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">View Tickets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="viewOwn" href="#">View Tickets</a>
+      </li>
+      
+    </ul>
+    </div>
+    <span class="navbar-text">
+      <span id = User-Info></span>
+      <a href = "http://localhost:8080/Expense_Reimbursement_System/HTML/index (1).html" class="btn btn-danger" id="logout-form-link" type="submit">Logout</a>
+    </span>
+  </div>
+  </div>
+  </div>
+</nav>
+
+
+<nav class="navbar navbar-expand-lg navbar-light"> 
+ <div class = "alert alert-primary" role = "alert">
+<div class="text-center">
+  <h2>Ticket History</h2>        
+  <table id="myTable" class="table table-hover">
+    <thead>
+      <tr class="table-primary">
+        <th>Ticket ID</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+  </table>
+  <form id="approveform" method="POST" action="Approve.do" role="form">
+  	<div>
+  		<input type="text" id="reimbID" name="reimbID" class="form-control" placeholder="Enter Remiburse ID">
+        <input type="submit" class="btn btn-primary" id="approveButton" name="approveButton" value="Approve">
+        <input type="submit" class="btn btn-primary" id="denyButton" name="denyButton" value="Deny">
+    </div>
+  </form>
+  
+  <div class="form-group row justify-content-center">
+    <div class="col-3.2">
+        <select class="custom-select">
+          <option selected>Filter Tickets by:</option>
+          <option value="1">Pending</option>
+          <option value="2">Ticket Id</option>
+          <option value="3">Username</option>
+          <option value="4">All</option>
+        </select>
+    </div>
+    <div class="col-3.5">
+     <button type="button" id="viewAll" onclick="stuffFunc()" class="btn btn-outline-info">View Tickets</button> 
+  </div>
+  </div>
+  </div>
+  </nav>
+
+
+
+<script type="text/javascript" src = "../JS/financeManager.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

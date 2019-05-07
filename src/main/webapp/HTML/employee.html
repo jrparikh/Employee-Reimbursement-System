@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Reimbursement System</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- NavBar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+<div class="form-group col">
+<div class = "alert alert-primary" role = "alert">
+  <a class="navbar-brand" style = "border-bottom: 1px solid blue"; href="#">Employee Portal</a>
+  
+  <div class="collapse navbar-collapse" id="navbarText">
+  <div class="form-group col">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Create a Ticket</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="viewOwn" href="#">View Tickets</a>
+      </li>
+      
+    </ul>
+    </div>
+    <span class="navbar-text" id = "Session-Info">
+    	<span id = User-Info></span>
+      <a href = "http://localhost:8080/Expense_Reimbursement_System/HTML/index (1).html" class="btn btn-danger" id="logout-form-link" type="submit">Logout</a>
+    </span>
+  </div>
+  </div>
+  </div>
+</nav>
+<!-- padding-right: 100px; -->
+<!-- Ticket History Column -->
+<div class="row align-items-start">
+  <nav class="navbar navbar-expand-lg navbar-light">  
+  <div class="col"> <!-- style="width: 35rem; "-->
+    <div class = "alert alert-primary" role = "alert">          
+      <div class="form-row">
+          
+      <div class="col text-center">
+        <h4 class="navbar-text" style = "border-bottom: 1px solid blue;" >Ticket History</h4>
+      </div>     
+      
+      <table id="myTable" class="table table-hover">
+        <thead>
+          <tr class="table-primary">
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+      </table>
+
+      </div>
+    </div>
+  </div>
+  </nav>
+
+
+
+
+<!-- Ticket Form Column-->
+  <nav class="navbar navbar-expand-lg navbar-light"> 
+    <div class="col" style="width: 35rem;">
+      <div class = "alert alert-primary" role = "alert">
+         
+          <div class="col text-center">
+            <h4 class="navbar-text" style = "border-bottom: 1px solid blue;">Ticket Form</h4>
+          </div>      
+          
+    <form id="ticket-form" method="POST" action="SubmitR.do" role="form">
+    
+         <div class="row">
+            <label for="reimbAmount">Amount</label>
+            <input type="text" id="reimbAmount" name = "reimbAmount" class="form-control" placeholder="Enter Amount">
+          </div>
+
+          <div class="row">
+            <label for="reimbType">Type of Reimbursement</label>
+               <select id="reimbType" name = "reimbType" class="form-control">
+                  <option selected>Choose...</option>
+                  <option >Lodging</option>
+                  <option >Travel</option>
+                  <option >Food</option>
+                  <option >Other</option>
+              </select> 
+          </div>
+
+          <div class="row">
+            <label for="reimbExplain">Explain</label>
+            <div class="input-group">
+              <input type = "text" class="form-control" id="reimbExplain" name = "reimbExplain" placeholder="Enter Explanation">
+              <br/>
+            </div>
+          </div>
+
+          <div class="row center"> 
+            <br/>
+            <input type="submit" class="btn btn-primary" id="crtab"  value="Submit Ticket">  
+          </div>
+          
+      </form>
+
+
+
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+<script type="text/javascript" src = "../JS/employee.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
